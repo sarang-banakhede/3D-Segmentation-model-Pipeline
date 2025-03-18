@@ -1,0 +1,57 @@
+#----------------------------------#
+
+# Model Configuration
+Model:
+  img_dim: [128, 128, 128]
+  in_channels: 1
+  base_filter: 16
+  class_num: 1
+  patch_size: 16
+  embedding_dim: 768
+  block_num: 12
+  head_num: 12
+  mlp_dim: 3072
+  z_idx_list: [3, 6, 9, 12]
+#----------------------------------#
+
+# All the paths
+Paths:
+  dataset_images_path: C:\Users\saran\OneDrive\Desktop\unetr\Data\images
+  dataset_annotation_path: C:\Users\saran\OneDrive\Desktop\unetr\Data\labels
+
+  preprocessed_data_path: C:\Users\saran\OneDrive\Desktop\unetr\Preprocessed
+  result_path: C:\Users\saran\OneDrive\Desktop\unetr\Results
+#----------------------------------#
+
+# Preprocess config
+Slice_in_one_chunk: 128
+target_size: [128,128]
+test_split: 0.2
+
+# epoch config
+save_epoch: 1
+intermediate_model_weight_path: None
+
+# Naming Convention
+model_save_name: unetr_model.pth
+train_history_name: train_history.json
+test_history_name: test_history.json
+#----------------------------------#
+
+# Data Loader Configuration
+Dataloader:
+  num_workers: 0
+  train_batch_size: 5
+  test_batch_size: 5
+#----------------------------------#
+
+# Training Configuration
+Training:
+  epochs: 5
+  learning_rate: 0.001
+  step_size : 10
+  gamma: 0.1
+  optimizer: Adam
+  threshold: 0.5
+#----------------------------------#
+  
