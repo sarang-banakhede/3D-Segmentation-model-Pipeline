@@ -1,0 +1,13 @@
+numpy==2.2.3
+scikit-learn==1.6.1
+nibabel==5.3.2
+pydicom==3.0.1
+pyyaml==6.0.2
+torch==2.6.0
+einops==0.8.1
+Pillow==11.1.0
+tqdm==4.67.1
+vedo==2025.5.3
+seaborn==0.13.2
+matplotlib==3.10.0
+monai

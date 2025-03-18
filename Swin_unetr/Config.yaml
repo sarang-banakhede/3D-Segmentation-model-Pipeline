@@ -1,0 +1,61 @@
+#----------------------------------#
+
+# Model Configuration
+Model:
+  img_size: [128, 128, 128]
+  in_channels: 1
+  feature_size: 48
+  out_channels: 1
+  depths: [2, 2, 2, 2]
+  num_heads: [3,6,12,24]
+  norm_name: 'instance'
+  drop_rate: 0.0
+  attn_drop_rate: 0.0
+  dropout_path_rate: 0.0
+  normalize: True
+  spatial_dims: 3
+  downsample: 'merging'
+  use_v2: False
+  #----------------------------------#
+
+# All the paths
+Paths:
+  dataset_images_path: C:\Users\saran\OneDrive\Desktop\Swin_unetr\Data\images
+  dataset_annotation_path: C:\Users\saran\OneDrive\Desktop\Swin_unetr\Data\labels
+
+  preprocessed_data_path: C:\Users\saran\OneDrive\Desktop\Swin_unetr\Preprocessed
+  result_path: C:\Users\saran\OneDrive\Desktop\Swin_unetr\Results
+#----------------------------------#
+
+# Preprocess config
+Slice_in_one_chunk: 128
+target_size: [128,128]
+test_split: 0.2
+
+# epoch config
+save_epoch: 1
+intermediate_model_weight_path: None
+
+# Naming Convention
+model_save_name: swin_unetr_model.pth
+train_history_name: train_history.json
+test_history_name: test_history.json
+#----------------------------------#
+
+# Data Loader Configuration
+Dataloader:
+  num_workers: 0
+  train_batch_size: 1
+  test_batch_size: 1
+#----------------------------------#
+
+# Training Configuration
+Training:
+  epochs: 1
+  learning_rate: 0.001
+  step_size : 10
+  gamma: 0.1
+  optimizer: Adam
+  threshold: 0.5
+#----------------------------------#
+  
